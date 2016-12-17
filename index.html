@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ngCribs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body ng-app="ngCribs" ng-controller="cribsController">
+  <div class="container">
+  <div class="jumbotron">
+  	<h1>My first Angular site</h1>
+  	<p>Here's to many more</p>
+  </div>
+  	<div class="well" ng-repeat="crib in cribs">
+		  <h3>{{ crib.address }}</h3>
+		  <p><strong>Type: </strong>{{ crib.type }}</p>
+		  <p><strong>Description: </strong>{{ crib.descripton }}</p>
+		  <p><strong>Price: </strong>{{ crib.price | currency:"&pound;"}}</p>
+	</div></div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap-tpls.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="scripts/cribsController.js"></script>
+</html>
